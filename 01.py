@@ -20,5 +20,4 @@ if __name__ == '__main__':
 
     # Apply to the url
     text = 'map'
-    trans = string.maketrans('abcdefghijklmnopqrstuvwxyz', 'cdefghijklmnopqrstuvwxyzab')
-    print text.translate(trans)
+    print "Apply to url: {0}".format(text.translate(trans))

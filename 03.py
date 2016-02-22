@@ -18,12 +18,16 @@ if __name__ == '__main__':
         '[^A-Z]+(?P<bodyguards1>[A-Z]{3})(?P<small_letter>[a-z]{1})(?P<bodyguards2>[A-Z]{3})[^A-Z]+', re.UNICODE)
     result = ""
 
-    f = open('03_text.txt', 'r')
+    try:
+        f = open('03_text.txt', 'r')
 
-    for line in f.readlines():
+        for line in f.readlines():
 
-        match = small_letter.search(line)
-        if match:
-            result = "{0}{1}".format(result, match.group("small_letter"))
+            match = small_letter.search(line)
+            if match:
+                result = "{0}{1}".format(result, match.group("small_letter"))
 
-    print result
+        f.close()
+        print result
+    except Exception as e:
+        print(e.message)
