@@ -15,7 +15,7 @@ import re
 
 if __name__ == '__main__':
     small_letter = re.compile(
-        '[^A-Z]+(?P<bodyguards1>[A-Z]{3})(?P<small_letter>[a-z]{1})(?P<bodyguards2>[A-Z]{3})[^A-Z]+', re.UNICODE)
+        '[^A-Z]+(?P<bodyguards1>[A-Z]{3})(?P<small_letter>[a-z])(?P<bodyguards2>[A-Z]{3})[^A-Z]+', re.UNICODE)
     result = ""
 
     try:
