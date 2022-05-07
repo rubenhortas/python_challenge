@@ -2,15 +2,13 @@
 # _*_ coding:utf-8 _*
 
 # http://www.pythonchallenge.com/pc/def/channel.html
-
 import signal
-from zipfile import ZipFile
 
+from zipfile import ZipFile
 from handlers.python import exit_signal_handler
 
-
 def get_next_file(i, zf, file_name, result):
-    isLast = True
+    is_last = True
 
     try:
         file_words = zf.read(file_name).split()
@@ -21,11 +19,11 @@ def get_next_file(i, zf, file_name, result):
 
         for word in file_words:
             if word.isdigit():
-                isLast = False
+                is_last = False
                 next_file = '{0}.txt'.format(word)
                 get_next_file(i+1, zf, next_file, result)
 
-        if isLast:
+        if is_last:
             print result
 
     except Exception as e:
