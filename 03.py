@@ -2,7 +2,6 @@
 # _*_ coding:utf-8 _*
 
 # http://www.pythonchallenge.com/pc/def/equality.html
-
 import re
 
 if __name__ == "__main__":

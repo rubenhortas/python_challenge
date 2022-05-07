@@ -2,7 +2,6 @@
 # _*_ coding:utf-8 _*
 
 # http://www.pythonchallenge.com/pc/def/linkedlist.php
-
 import re
 import signal
 
@@ -27,7 +26,6 @@ def get_url(i, url):
             get_url(i + 1, next_url)
         else:
             print_html(str(html, "utf-8"))
-
     except Exception as e:
         print(e)
 

@@ -4,8 +4,8 @@
 # http://www.pythonchallenge.com/pc/def/channel.html
 
 import signal
-from zipfile import ZipFile
 
+from zipfile import ZipFile
 from handlers.python import exit_signal_handler
 
 
@@ -26,7 +26,6 @@ def get_next_file(i, zf, file_name, result):
 
         if is_last:
             print(result)
-
     except Exception as e:
         raise e
 
