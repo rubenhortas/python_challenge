@@ -1,13 +1,5 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 # _*_ coding:utf-8 _*
-
-"""
-@author:  Rubén Hortas Astariz <http://rubenhortas.blogspot.com>
-@contact: rubenhortas at gmail.com
-@github:  http://github.com/rubenhortas
-@license: CC BY-NC-SA 3.0 <http://creativecommons.org/licenses/by-nc-sa/3.0/>
-@file:    02.py  
-"""
 
 # http://www.pythonchallenge.com/pc/def/ocr.html
 
@@ -22,6 +14,7 @@ if __name__ == '__main__':
 
         for line in f.readlines():
             match = rare_characters.search(line)
+
             if match:
                 result = "{0}{1}".format(result, match.group(0))
 

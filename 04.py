@@ -1,13 +1,5 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 # _*_ coding:utf-8 _*
-
-"""
-@author:  Rubén Hortas Astariz <http://rubenhortas.blogspot.com>
-@contact: rubenhortas at gmail.com
-@github:  http://github.com/rubenhortas
-@license: CC BY-NC-SA 3.0 <http://creativecommons.org/licenses/by-nc-sa/3.0/>
-@file:    04  
-"""
 
 # http://www.pythonchallenge.com/pc/def/linkedlist.php
 
@@ -28,8 +20,8 @@ def get_url(i, url):
 
         response = urllib2.urlopen(url)
         html = response.read()
-
         match = CHAIN_RE.search(html)
+
         if match:
             next_url = "{0}{1}".format(BASE_URL, match.group('next'))
             get_url(i + 1, next_url)
