@@ -1,3 +1,5 @@
 .idea
 *.zip
 *.png
+__pycache__
+*.suo
