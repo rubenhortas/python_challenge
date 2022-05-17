@@ -9,6 +9,7 @@ from zipfile import ZipFile
 from handlers.python import exit_signal_handler
 
 
+# noinspection PyShadowingNames
 def get_next_file(i, zf, file_name, result):
     is_last = True
 
