@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-# _*_ coding:utf-8 _*
-
 # http://www.pythonchallenge.com/pc/def/map.html
 if __name__ == "__main__":
     # noinspection SpellCheckingInspection
