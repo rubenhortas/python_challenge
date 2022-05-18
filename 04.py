@@ -7,7 +7,7 @@ from handlers.python import exit_signal_handler
 from handlers.url import print_html
 
 BASE_URL = 'http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing='
-CHAIN_RE = re.compile('(nothing[a-zA-Z =]*)(?P<next>[0-9]*)')
+CHAIN_RE = re.compile('(nothing[a-zA-Z =]*)(?P<next>\\d*)')
 
 
 def get_url(i, url):
