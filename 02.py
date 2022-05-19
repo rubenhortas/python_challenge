@@ -2,7 +2,8 @@
 import re
 
 if __name__ == '__main__':
-    re = re.compile('[a-z\\d ]', re.UNICODE)
+    # re = re.compile('[a-zA-Z.,:;''\\d ]', re.UNICODE) # Book characters
+    re = re.compile('[a-z]', re.UNICODE)  # Needed characters to solve the challenge
     result = ""
 
     try:
