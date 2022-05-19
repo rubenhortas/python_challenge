@@ -3,7 +3,7 @@ import re
 
 if __name__ == '__main__':
     rare_characters = re.compile('[a-zA-Z\\d ]', re.UNICODE)
-    result = ''
+    result = ""
 
     try:
         f = open('02_text.txt', 'r')
