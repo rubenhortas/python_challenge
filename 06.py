@@ -31,11 +31,11 @@ def get_next_file(i, zf, file_name, result):
 if __name__ == '__main__':
     signal.signal(signal.SIGINT, exit_signal_handler)
 
-    result = ''
+    result = ""
 
     # Download the zip file from http://www.pythonchallenge.com/pc/def/channel.zip
     try:
-        with ZipFile('channel.zip') as zf:
-            get_next_file(0, zf, 'readme.txt', result)
+        with ZipFile("channel.zip") as zf:
+            get_next_file(0, zf, "readme.txt", result)
     except Exception as e:
         print(e)
