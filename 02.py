@@ -2,7 +2,7 @@
 import re
 
 if __name__ == '__main__':
-    rare_characters = re.compile('[a-zA-Z0-9 ]', re.UNICODE)
+    rare_characters = re.compile('[a-zA-Z\\d ]', re.UNICODE)
     result = ''
 
     try:
@@ -12,7 +12,7 @@ if __name__ == '__main__':
             match = rare_characters.search(line)
 
             if match:
-                result = '{0}{1}'.format(result, match.group(0))
+                result = "%s%s" % (result, match.group(0))
 
         f.close()
         print(result)
