@@ -2,7 +2,7 @@
 import re
 
 if __name__ == '__main__':
-    re = re.compile('[a-zA-Z\\d ]', re.UNICODE)
+    re = re.compile('[a-z\\d ]', re.UNICODE)
     result = ""
 
     try:
