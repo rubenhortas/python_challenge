@@ -7,4 +7,4 @@ if __name__ == '__main__':
 
     # Apply to the url
     text = "map"
-    print("Apply to url: %s" % text.translate(trans))
+    print(f"Apply to url: {text.translate(trans)}")

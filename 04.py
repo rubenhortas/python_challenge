@@ -12,14 +12,14 @@ CHAIN_RE = re.compile('(nothing[a-zA-Z =]*)(?P<next>\\d*)')
 
 def get_url(i, url):
     try:
-        print("%s - Fetching %s" % (i, url))
+        print(f"{i} - Fetching {url}")
 
         response = request.urlopen(url)
         html = response.read()
         match = CHAIN_RE.search(str(html, 'utf-8'))
 
         if match:
-            next_url = "%s%s" % (BASE_URL, match.group("next"))
+            next_url = f"{BASE_URL}{match.group('next')}"
             get_url(i + 1, next_url)
         else:
             print_html(str(html, 'utf-8'))

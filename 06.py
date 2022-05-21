@@ -14,12 +14,12 @@ def get_next_file(i, zf, file_name, result):
         file_words = zf.read(file_name).split()
         info = zf.getinfo(file_name).comment
 
-        result = '{0}{1}'.format(result, info)
+        result = f"{result}{info}"
 
         for word in file_words:
             if word.isdigit():
                 is_last = False
-                next_file = '{0}.txt'.format(word)
+                next_file = f"{word.decode('utf-8')}.txt"
                 get_next_file(i + 1, zf, next_file, result)
 
         if is_last:
@@ -35,7 +35,7 @@ if __name__ == '__main__':
 
     # Download the zip file from http://www.pythonchallenge.com/pc/def/channel.zip
     try:
-        with ZipFile("channel.zip") as zf:
-            get_next_file(0, zf, "readme.txt", result)
+        with ZipFile('channel.zip') as zf:
+            get_next_file(0, zf, 'readme.txt', result)
     except Exception as e:
         print(e)

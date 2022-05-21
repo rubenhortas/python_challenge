@@ -17,9 +17,9 @@ if __name__ == '__main__':
 
         for ld in data:  # data composed of lists
             for t in ld:  # lists composed by tuples
-                s = "%s%s" % (s, (t[1]*t[0]))
+                s = f"{s}{t[1]*t[0]}"
 
-            s = "%s\n" % s
+            s = f"{s}\n"
 
         print(s)
     except Exception as e:

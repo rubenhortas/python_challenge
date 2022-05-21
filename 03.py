@@ -12,7 +12,7 @@ if __name__ == '__main__':
             match = small_letter.search(line)
 
             if match:
-                result = "%s%s" % (result, match.group("small_letter"))
+                result = f"{result}{match.group('small_letter')}"
 
         f.close()
         print(result)

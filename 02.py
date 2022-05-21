@@ -13,7 +13,7 @@ if __name__ == '__main__':
             match = re.search(line)
 
             if match:
-                result = "%s%s" % (result, match.group(0))
+                result = f"{result}{match.group(0)}"
 
         f.close()
         print(result)
