@@ -14,7 +14,7 @@ def get_next_file(i, zf, file_name, result):
         file_words = zf.read(file_name).split()
         info = zf.getinfo(file_name).comment
 
-        result = f"{result}{info}"
+        result = f"{result}{info.decode('utf-8')}"
 
         for word in file_words:
             if word.isdigit():
