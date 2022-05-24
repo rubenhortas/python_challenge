@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # http://www.pythonchallenge.com/pc/def/linkedlist.php
 import re
 import signal

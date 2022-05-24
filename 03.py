@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # http://www.pythonchallenge.com/pc/def/equality.html
 import re
 

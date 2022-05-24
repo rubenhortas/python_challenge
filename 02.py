@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # http://www.pythonchallenge.com/pc/def/ocr.html
 import re
 
