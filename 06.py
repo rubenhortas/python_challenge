@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 # http://www.pythonchallenge.com/pc/def/channel.html
 
 import signal
@@ -14,13 +15,12 @@ def get_next_file(i, zf, file_name, result):
     try:
         file_words = zf.read(file_name).split()
         info = zf.getinfo(file_name).comment
-
-        result = f"{result}{info.decode('utf-8')}"
+        result = f"{result}{info.decode('UTF-8')}"
 
         for word in file_words:
             if word.isdigit():
                 is_last = False
-                next_file = f"{word.decode('utf-8')}.txt"
+                next_file = f"{word.decode('UTF-8')}.txt"
                 get_next_file(i + 1, zf, next_file, result)
 
         if is_last:

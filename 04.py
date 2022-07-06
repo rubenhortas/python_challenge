@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
+
 # http://www.pythonchallenge.com/pc/def/linkedlist.php
+
 import re
 import signal
 
@@ -17,13 +19,13 @@ def get_url(i, url):
 
         response = request.urlopen(url)
         html = response.read()
-        match = CHAIN_RE.search(str(html, 'utf-8'))
+        match = CHAIN_RE.search(str(html, 'UTF-8'))
 
         if match:
             next_url = f"{BASE_URL}{match.group('next')}"
             get_url(i + 1, next_url)
         else:
-            print_html(str(html, 'utf-8'))
+            print_html(str(html, 'UTF-8'))
     except Exception as e:
         print(e)
 
